@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="list" class="collection.ListInjection">
+        <!--数组注入-->
+        <property name="data">
+            <array>
+                <value>传感器</value>
+                <value>感应器</value>
+                <value>温度器具</value>
+            </array>
+        </property>
+
+        <!--集合注入-->
+        <property name="list">
+            <list>
+                <value>参数1</value>
+                <value>参数2</value>
+                <value>参数3</value>
+            </list>
+        </property>
+
+        <!--Map注入-->
+        <property name="map">
+            <map>
+                <entry key="Subject" value="java"/>
+                <entry key="爬虫" value="Python"/>
+            </map>
+        </property>
+
+        <!--1.引用数据类型集合注入-->
+        <property name="courseList">
+            <list>
+                <!--3.值就是对象,通过ref标签引入多个course对象-->
+                <ref bean="fen1"/>
+                <ref bean="fen2"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--2.创建多个course对象-->
+    <bean id="fen1" class="collection.Course">
+        <property name="course_Name" value="线性代数"/>
+        <property name="course_num" value="6学分"/>
+    </bean>
+    <bean id="fen2" class="collection.Course">
+        <property name="course_Name" value="线性代数"/>
+        <property name="course_num" value="6学分"/>
+    </bean>
+
+    <!--1.提取集合注入部分-->
+    <!--需要在配置中引入名称空间-->
+    <util:list id="bookList">
+        <value>国富论</value>
+        <value>挪威的森林</value>
+    </util:list>
+
+    <!--2.提取list集合类型属性注入使用-->
+    <bean id="book" class="collection.Course" scope="prototype"><!--作用域的体现-->
+        <property name="list" ref="bookList"/>
+    </bean>
+</beans>
