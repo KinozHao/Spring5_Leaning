@@ -27,4 +27,7 @@
         </property>
     </bean>
 
+    <bean id="file" class="Afile">
+        <property name="name" value="王小明"/>
+    </bean>
 </beans>

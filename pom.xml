@@ -12,6 +12,7 @@
         <module>A_IOC</module>
         <module>A_IOC</module>
         <module>B_Annotation</module>
+        <module>C_AOP</module>
     </modules>
 
     <properties>
@@ -25,7 +26,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-            <scope>test</scope>
+            <scope>Afile</scope>
         </dependency>
         <!-- Spring依赖 -->
         <!-- 1.Spring核心依赖 -->
@@ -68,12 +69,12 @@
             <version>4.3.7.RELEASE</version>
         </dependency>
         <!-- 4.Spring test依赖：方便做单元测试和集成测试 -->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-Afile -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
+            <artifactId>spring-Afile</artifactId>
             <version>4.3.7.RELEASE</version>
-            <scope>test</scope>
+            <scope>Afile</scope>
         </dependency>
 
 

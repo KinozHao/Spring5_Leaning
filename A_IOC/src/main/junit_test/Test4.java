@@ -33,4 +33,5 @@ public class Test4 {
         Course gc = context.getBean("gc", Course.class);
         System.out.println(gc);
     }
+
 }

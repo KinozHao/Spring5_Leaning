@@ -12,14 +12,6 @@ public class User {
         this.userpass = userpass;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setUserpass(String userpass) {
-        this.userpass = userpass;
-    }
-
     public void UsOutput(){
         System.out.println("我是用户");
     }
