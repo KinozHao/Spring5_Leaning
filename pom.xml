@@ -26,7 +26,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-            <scope>Afile</scope>
         </dependency>
         <!-- Spring依赖 -->
         <!-- 1.Spring核心依赖 -->
@@ -69,14 +68,12 @@
             <version>4.3.7.RELEASE</version>
         </dependency>
         <!-- 4.Spring test依赖：方便做单元测试和集成测试 -->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-Afile -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-Afile</artifactId>
-            <version>4.3.7.RELEASE</version>
-            <scope>Afile</scope>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>4.3.7.RELEASE</version>
         </dependency>
-
 
         <!--注解依赖 https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
         <dependency>
@@ -99,6 +96,39 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
         </dependency>
+
+        <!--AspectJ 开始-->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>4.3.7.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <!--AspectJ 结束-->
     </dependencies>
 
 </project>

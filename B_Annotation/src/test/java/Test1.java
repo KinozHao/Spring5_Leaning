@@ -28,6 +28,7 @@ public class Test1 {
         System.out.println("-----");
         //普通属性注入@Value
         userService.value();
+
     }
     @Test
     public void UserDaoTest2(){
