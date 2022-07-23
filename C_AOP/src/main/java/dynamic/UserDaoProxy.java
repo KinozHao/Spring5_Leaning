@@ -7,8 +7,8 @@ import java.util.Arrays;
 /**
  * @author kinoz
  * @Date 2022/7/22 - 20:32
- * @apiNote
- */ //代理对象代码
+ * @apiNote 代理类
+ */
 class UserDaoProxy implements InvocationHandler {
     //1.把创建的是谁的对象，把谁传递进来
     //有参数构造传递

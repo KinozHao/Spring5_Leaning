@@ -13,6 +13,7 @@
         <module>A_IOC</module>
         <module>B_Annotation</module>
         <module>C_AOP</module>
+        <module>D_DataAccess</module>
     </modules>
 
     <properties>

@@ -3,7 +3,7 @@ package dynamic;
 /**
  * @author kinoz
  * @Date 2022/7/21 - 10:24
- * @apiNote 动态代理体现
+ * @apiNote 被代理类
  */
 public class UserDaoImpl implements UserDao{
     @Override

@@ -9,6 +9,7 @@
         <module name="A_IOC" />
         <module name="C_AOP" />
         <module name="B_Annotation" />
+        <module name="D_DataAccess" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
