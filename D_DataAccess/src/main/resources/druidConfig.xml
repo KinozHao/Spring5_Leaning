@@ -24,4 +24,7 @@
         <!--注入DataSource-->
         <property name="dataSource" ref="druid"/>
     </bean>
+
+    <!--java.sql.SQLException: Access denied for user ''@'localhost' (using password: NO)
+    property中name="username" 而非 name="name"-->
 </beans>

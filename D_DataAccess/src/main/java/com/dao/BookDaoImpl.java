@@ -2,10 +2,13 @@ package com.dao;
 
 import com.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * @author kinoz
@@ -45,14 +48,28 @@ public class BookDaoImpl implements BookDao {
     }
 
 
-    //查询表记录数
-    @Override
-    public int QueryCount() {
-        String sql = "select count(*) from book_info";
 
-        return jdbcTemplate.queryForObject(sql, Integer.class);
+
+    //批量添加
+    @Override
+    public void batchAdd(List<Object[]> args) {
+        String sql = "insert into book_info values(?,?,?,?)";
+        final int[] ints = jdbcTemplate.batchUpdate(sql, args);
+        System.out.println(Arrays.toString(ints));
+    }
+    //批量修改
+
+    @Override
+    public void batchUpdate(List<Object[]> args) {
+        String  sql = "update book_info set name=?,money=?,password=? where id=?";
+        final int[] ints = jdbcTemplate.batchUpdate(sql, args);
+        System.out.println(Arrays.toString(ints));
     }
 
-
-
+    @Override
+    public void batchDel(List<Object[]> args) {
+        String sql = "delete from book_info where id = ?";
+        final int[] ints = jdbcTemplate.batchUpdate(sql, args);
+        System.out.println(Arrays.toString(ints));
+    }
 }

@@ -1,18 +1,26 @@
-package com.entity;
+package icbc.entity;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author kinoz
- * @Date 2022/7/23 - 15:18
+ * @Date 2022/7/24 - 15:43
  * @apiNote
  */
-@Component
+@Repository
 public class Book {
     private int id;
     private String name;
     private double money;
     private String password;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -36,14 +44,6 @@ public class Book {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     @Override

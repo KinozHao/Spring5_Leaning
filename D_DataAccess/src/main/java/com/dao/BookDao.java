@@ -2,10 +2,12 @@ package com.dao;
 
 import com.entity.Book;
 
+import java.util.List;
+
 /**
  * @author kinoz
  * @Date 2022/7/23 - 15:12
- * @apiNote
+ * @apiNote Book DML功能
  */
 public interface BookDao {
     //增
@@ -15,6 +17,11 @@ public interface BookDao {
     //改
     void updateBook(Book book);
 
-    //查询表记录数
-    int QueryCount();
+    //批量添加
+    void batchAdd(List<Object[]> args);
+    //批量删除
+    void batchDel(List<Object[]> args);
+    //批量修改
+    void batchUpdate(List<Object[]> args);
+
 }
