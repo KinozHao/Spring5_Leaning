@@ -49,7 +49,6 @@ public class BookDaoImpl implements BookDao {
 
 
 
-
     //批量添加
     @Override
     public void batchAdd(List<Object[]> args) {

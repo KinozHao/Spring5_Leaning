@@ -14,6 +14,7 @@
         <module>B_Annotation</module>
         <module>C_AOP</module>
         <module>D_DataAccess</module>
+        <module>E_Affairs</module>
     </modules>
 
     <properties>

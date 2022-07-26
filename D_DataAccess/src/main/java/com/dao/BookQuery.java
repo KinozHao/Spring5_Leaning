@@ -10,7 +10,7 @@ import java.util.List;
  * @apiNote Book查询功能
  */
 public interface BookQuery {
-    //查询表记录数q
+    //查询表记录数
     int queryCount();
     //查询返回对象
     Book findBookInfo(String id);
