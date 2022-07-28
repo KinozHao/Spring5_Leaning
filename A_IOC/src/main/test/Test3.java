@@ -1,6 +1,7 @@
 import auto_package.Staff;
 import life_circle.LifeCircle;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,8 +11,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Test3 {
     @Test
-    public void Test1(){
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("LifeCircle.xml");
+    public void lifeTest(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("LifeBean.xml");
         LifeCircle lc = context.getBean("lc", LifeCircle.class);
         System.out.println("4.对象获取到，bean可以使用");
         System.out.println(lc);
@@ -21,7 +22,8 @@ public class Test3 {
 
     @Test
     public void autoTest(){
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("auto.xml");
+        //自动装配
+        ApplicationContext context = new ClassPathXmlApplicationContext("LifeBean.xml");
         Staff staff = context.getBean("staff", Staff.class);
         System.out.println(staff);
     }

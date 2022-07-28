@@ -1,13 +1,13 @@
 package com.dao;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author kinoz
  * @Date 2022/7/20 - 20:17
  * @apiNote
  */
-@Component(value = "student")
+@Repository(value = "student")
 public class StudentImpl implements UserDao {
     @Override
     public void show() {

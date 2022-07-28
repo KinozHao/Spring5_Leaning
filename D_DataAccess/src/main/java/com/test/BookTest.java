@@ -1,3 +1,5 @@
+package com.test;
+
 import com.entity.Book;
 import com.service.BookService;
 import org.junit.Test;

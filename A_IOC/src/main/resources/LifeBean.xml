@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--IOC生命周期配置-->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
@@ -7,4 +8,15 @@
         </bean>
         <!--配置后置处理器 当前配置文件都会添加-->
         <bean id="myBean" class="life_circle.BeanPostUs"/>
+
+        <!--
+        autowire属性实现自动装配
+        两个常用值为 byName和byType
+        byName id需要和JavaBean类的属性值名称相同
+        -->
+        <bean id="staff" class="auto_package.Staff" autowire="byName">
+            <!--<property name="dep" ref="dep"/>-->
+        </bean>
+
+        <bean id="dep" class="auto_package.Dep"/>
 </beans>

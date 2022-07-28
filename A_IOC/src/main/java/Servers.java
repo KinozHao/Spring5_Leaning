@@ -3,7 +3,7 @@
  * @Date 2022/7/15 - 14:27
  * @apiNote
  */
-public class ServerFw {
+public class Servers {
     private String serverName;
 
     public void setServerName(String serverName) {

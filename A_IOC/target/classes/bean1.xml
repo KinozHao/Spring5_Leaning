@@ -4,7 +4,7 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--set注入-->
-    <bean id="server" class="ServerFw">
+    <bean id="server" class="Servers">
         <property name="serverName" value="腾讯云"/>
     </bean>
 
@@ -25,9 +25,5 @@
             <!--固定写法<![CDATA[这里写值]]>-->
             <value><![CDATA[<南京>]]></value>
         </property>
-    </bean>
-
-    <bean id="file" class="Afile">
-        <property name="name" value="王小明"/>
     </bean>
 </beans>

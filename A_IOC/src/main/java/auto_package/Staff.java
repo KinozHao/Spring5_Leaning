@@ -3,7 +3,7 @@ package auto_package;
 /**
  * @author kinoz
  * @Date 2022/7/19 - 14:29
- * @apiNote
+ * @apiNote 自动装配
  */
 public class Staff {
     private Dep dep;

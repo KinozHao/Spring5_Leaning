@@ -5,11 +5,12 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-        <!--2.开启组件扫描
-        方式1:使用逗号隔开
-        方式2:只写上级目录-->
+    <!--2.开启组件扫描
+    方式1:使用逗号隔开
+    方式2:只写上级目录-->
     <context:component-scan base-package="com"/>
 
+    <!--了解部分-->
     <!--设置组件扫面仅包含指定注解 自己配置filter-->
     <context:component-scan base-package="com" use-default-filters="false">
         <context:include-filter type="annotation"

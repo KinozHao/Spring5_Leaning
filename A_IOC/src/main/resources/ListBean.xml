@@ -62,4 +62,7 @@
     <bean id="book" class="collection.Course" scope="prototype"><!--作用域的体现-->
         <property name="list" ref="bookList"/>
     </bean>
+
+    <!--FactoryBean接口的理解-->
+    <bean id="gc" class="collection.GzBean"/>
 </beans>

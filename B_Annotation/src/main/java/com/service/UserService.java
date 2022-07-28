@@ -15,19 +15,20 @@ import javax.annotation.Resource;
  */
 @Service
 public class UserService {
-    @Value("窗前明月光,疑是地上霜")       //普通属性注入
+    //普通属性注入
+    @Value("窗前明月光,疑是地上霜")
     private String line_chinese;
+    public void value(){
+        System.out.println(line_chinese);
+    }
 
-    @Autowired                          //根据类型注入使用注解无需使用set方法
+
+    @Autowired
     @Qualifier(value = "userDaoImpl1")  //Qualifier需搭配Autowired使用 一个接口存在多个实现类用于指定具体实现类
     private UserDao userDao;
 
     @Resource(name = "student")         //相当于autowired和qualifier结合 指定name情况下根据属性名称 不指定情况下根据类型
     private UserDao student;
-
-    public void value(){
-        System.out.println(line_chinese);
-    }
 
     public void info(){
         System.out.println("UserService class");

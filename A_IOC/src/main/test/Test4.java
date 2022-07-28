@@ -12,14 +12,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test4 {
     @Test
     public void cTest1(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("ListConfig.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ListBean.xml");
         ListInjection list = context.getBean("list", ListInjection.class);
         list.listData();
     }
 
     @Test
     public void BookTest(){
-        ApplicationContext con = new ClassPathXmlApplicationContext("ListConfig.xml");
+        ApplicationContext con = new ClassPathXmlApplicationContext("ListBean.xml");
         Course book = con.getBean("book", Course.class);
         Course book2 = con.getBean("book", Course.class);
         book.bookList();
@@ -29,7 +29,7 @@ public class Test4 {
     }
     @Test
     public void GzTest(){
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("GzBean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ListBean.xml");
         Course gc = context.getBean("gc", Course.class);
         System.out.println(gc);
     }

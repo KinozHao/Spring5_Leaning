@@ -4,6 +4,8 @@ import affairs.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -13,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 //此注解用于开启事务
-@Transactional
+@Transactional(timeout = -1,propagation = Propagation.REQUIRED,isolation = Isolation.REPEATABLE_READ)
 public class UserService {
     @Autowired
     private UserDao userDao;
