@@ -1,4 +1,4 @@
-package affairs.util;
+package all_zhujie.util;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +16,7 @@ import javax.sql.DataSource;
  * @apiNote
  */
 @Configuration
-@ComponentScan(basePackages = "affairs") //开启组件扫描
+@ComponentScan(basePackages = "all_zhujie") //开启组件扫描
 @EnableTransactionManagement        //开启事务管理器
 public class BeanConfig {
     //创建数据库连接池
@@ -41,7 +41,7 @@ public class BeanConfig {
 
     //创建事务管理器
     @Bean
-    public DataSourceTransactionManager getDSTM(DataSource dataSource){
+    public DataSourceTransactionManager getTransactionManager(DataSource dataSource){
         final DataSourceTransactionManager TransactionManager = new DataSourceTransactionManager();
         TransactionManager.setDataSource(dataSource);
         return TransactionManager;

@@ -4,6 +4,7 @@ import com.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @Date 2022/7/24 - 15:26
  * @apiNote
  */
+@Component
 public class BookQueryImpl implements BookQuery{
 
     //注入jdbc template

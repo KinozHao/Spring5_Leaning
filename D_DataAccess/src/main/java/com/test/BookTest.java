@@ -22,11 +22,11 @@ public class BookTest {
 
         //增加操作
         final Book book = new Book();
-        book.setId(8);
+        book.setId(11);
         book.setName("背包十年");
         book.setMoney(39.5);
         book.setPassword("123456");
-        //bs.addBook(book);
+        bs.addBook(book);
 
         //删除操作
         //bs.delBook("8");

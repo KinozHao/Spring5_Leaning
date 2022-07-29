@@ -1,9 +1,8 @@
-package affairs.service;
+package all_zhujie.service;
 
-import affairs.dao.UserDao;
+import all_zhujie.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @apiNote
  */
 @Service
-//此注解用于开启事务 基于xml测试时需注释掉
+//此注解用于开启事务
 @Transactional(timeout = -1,propagation = Propagation.REQUIRED,isolation = Isolation.REPEATABLE_READ)
 public class UserService {
     @Autowired

@@ -1,10 +1,8 @@
 package affairs.test;
 
 import affairs.service.UserService;
-import affairs.util.BeanConfig;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -25,10 +23,5 @@ public class AffairsTest {
         final UserService userService = context.getBean("userService", UserService.class);
         userService.transfer();
     }
-    @Test
-    public void All_annotation(){
-        ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
-        final UserService userService = context.getBean("userService", UserService.class);
-        userService.transfer();
-    }
+
 }
