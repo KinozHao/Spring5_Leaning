@@ -32,6 +32,7 @@ public class JTest5 {
         final GenericApplicationContext cont = new GenericApplicationContext();
         //2.调用cont中的方法对象注册
         cont.refresh();
+
         //Lambda表达式
         //cont.registerBean(Lambda.class,() -> new Lambda());
         //方法引用

@@ -1,3 +1,5 @@
+package com.test;
+
 import com.class1.HelloSpring;
 import com.config.SpringConfig;
 import com.service.UserService;

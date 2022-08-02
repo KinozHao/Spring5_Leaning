@@ -2,9 +2,9 @@ package com.test;
 
 import com.entity.Book;
 import com.service.BookService;
-import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,19 @@ import java.util.List;
 /**
  * @author kinoz
  * @Date 2022/7/23 - 15:36
- * @apiNote
+ * @apiNote 使用ClassPathXmlContextApplication
+ * 2022/8/2 使用Junit替换
  */
+@SpringJUnitConfig(locations = "classpath:druidConfig.xml")
 public class BookTest {
+    @Autowired
+    public BookService bs;
+
     @Test
     public void cmdTest(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("druidConfig.xml");
-        final BookService bs = context.getBean("bookService", BookService.class);
-
         //增加操作
         final Book book = new Book();
-        book.setId(11);
+        book.setId(100);
         book.setName("背包十年");
         book.setMoney(39.5);
         book.setPassword("123456");
@@ -42,8 +44,6 @@ public class BookTest {
     }
     @Test
     public void queryTest(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("druidConfig.xml");
-        BookService bs = context.getBean("bookService", BookService.class);
         //查询数据总数
         //bs.queryCount();
 

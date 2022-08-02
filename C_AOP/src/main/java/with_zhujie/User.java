@@ -1,14 +1,21 @@
+package with_zhujie;
+
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import with_Annotation.User;
+import org.springframework.stereotype.Component;
 
 /**
  * @author kinoz
- * @Date 2022/7/22 - 18:58
- * @apiNote aop测试
+ * @Date 2022/7/22 - 18:38
+ * @apiNote 被增强类
  */
-public class Test1 {
-    @Test
+@Component
+public class User {
+    public void show(){
+        System.out.println("a message from user");
+    }
+
+    @Test //Aop测试
     public void annotationTest(){
         //基于注解测试
         final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("UserConfig.xml");

@@ -21,5 +21,4 @@ public class JTest4 {
     public void test1(){
         us.transfer();
     }
-
 }

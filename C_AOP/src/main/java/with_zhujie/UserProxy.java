@@ -1,4 +1,4 @@
-package with_Annotation;
+package with_zhujie;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -13,11 +13,11 @@ import org.springframework.stereotype.Component;
 @Aspect //生成代理对象
 public class UserProxy {
     //相同的切入点抽取
-    @Pointcut(value ="execution(* with_Annotation.User.show(..))")
+    @Pointcut(value ="execution(* with_zhujie.User.show(..))")
     public void userPoint(){};
 
     //默认写法
-    @Before(value = "execution(* with_Annotation.User.show(..))")
+    @Before(value = "execution(* with_zhujie.User.show(..))")
     public void before(){
         System.out.println("前置通知");
     }

@@ -1,4 +1,4 @@
-package with_Annotation;
+package with_zhujie;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class StudentProxy {
     @Value("前置对象")
     private String level;
-    @Before(value = "execution(* with_Annotation.User.show(..))")
+    @Before(value = "execution(* with_zhujie.User.show(..))")
     @Order(0)       //此注解设置优先级 数字小等级高
     public void show(){
         System.out.println(level+":我是小学生使用了order我优先");
