@@ -22,7 +22,7 @@
 
     <!--4.创建jdbcTemplate对象-->
     <bean id="database" class="org.springframework.jdbc.core.JdbcTemplate">
-        <!--4.1注入DataSource-->
+        <!--4.1注入druid数据库-->
         <property name="dataSource" ref="druid"/>
     </bean>
 

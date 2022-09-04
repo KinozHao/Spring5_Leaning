@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    自动注入
+    autowire属性实现自动装配
+    两个常用值为 byName和byType
+    byName id需要和JavaBean类的属性值名称相同
+    -->
+    <bean id="staff" class="b_autowire.Staff" autowire="byName">
+        <!--<property name="dep" ref="dep"/>-->
+    </bean>
+
+    <bean id="dep" class="b_autowire.Dep"/>
+
+
+    <!--外部bean-->
+    <bean id="userService" class="d_top.service.UserService">
+        <!--注入userDao对象
+        name属性:类里面属性名称
+        ref属性:userDao对象bean标签id值-->
+        <property name="userDao" ref="udi"/>
+    </bean>
+    <bean id="udi" class="d_top.dao.UdImpl"/>
+
+    <!--1.内部bean-->
+    <bean id="employee" class="d_top.ltd.Staff">
+        <property name="name" value="小明"/>
+        <property name="gender" value="男"/>
+        <property name="dept">
+            <bean class="d_top.ltd.Department">
+                <property name="dname" value="人事部"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!--2.内部bean级联赋值-->
+    <bean id="employee2" class="d_top.ltd.Staff">
+        <property name="name" value="汤姆"/>
+        <property name="gender" value="男"/>
+        <!--通过外部bean直接进行赋值-->
+        <property name="dept" ref="dept"/>
+        <!--优先使用内部标签-->
+        <property name="dept.dname" value="技术部"/>
+    </bean>
+    <bean id="dept" class="d_top.ltd.Department">
+        <property name="dname" value="研发部"/>
+    </bean>
+    
+</beans>

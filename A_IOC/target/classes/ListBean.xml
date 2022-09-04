@@ -4,7 +4,7 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-    <bean id="list" class="collection.ListInjection">
+    <bean id="list" class="c_list.ListInjection">
         <!--数组注入-->
         <property name="data">
             <array>
@@ -42,11 +42,11 @@
     </bean>
 
     <!--2.创建多个course对象-->
-    <bean id="fen1" class="collection.Course">
+    <bean id="fen1" class="c_list.Course">
         <property name="course_Name" value="线性代数"/>
         <property name="course_num" value="6学分"/>
     </bean>
-    <bean id="fen2" class="collection.Course">
+    <bean id="fen2" class="c_list.Course">
         <property name="course_Name" value="线性代数"/>
         <property name="course_num" value="6学分"/>
     </bean>
@@ -59,10 +59,10 @@
     </util:list>
 
     <!--2.提取list集合类型属性注入使用-->
-    <bean id="book" class="collection.Course" scope="prototype"><!--作用域的体现-->
+    <bean id="book" class="c_list.Course" scope="prototype"><!--作用域的体现-->
         <property name="list" ref="bookList"/>
     </bean>
 
     <!--FactoryBean接口的理解-->
-    <bean id="gc" class="collection.GzBean"/>
+    <bean id="gc" class="c_list.GzBean"/>
 </beans>

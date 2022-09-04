@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--set注入-->
+    <bean id="server" class="a_osu.Servers">
+        <property name="serverName" value="腾讯云"/>
+    </bean>
+
+    <!--有参构造注入-->
+    <bean id="user" class="a_osu.User">
+        <constructor-arg name="username" value="左由中一"/>
+        <constructor-arg name="userpass" value="666"/>
+    </bean>
+
+    <!--通过p标签方式注入属性-->
+    <bean id="order" class="a_osu.Orders" p:orderNo="100345" p:orderPic="1万个">
+        <!--注入null值-->
+        <property name="orderName">
+            <null/>
+        </property>
+        <!--注入含有特殊符号的值-->
+        <property name="orderAddress">
+            <!--固定写法<![CDATA[这里写值]]>-->
+            <value><![CDATA[<南京>]]></value>
+        </property>
+    </bean>
+</beans>
