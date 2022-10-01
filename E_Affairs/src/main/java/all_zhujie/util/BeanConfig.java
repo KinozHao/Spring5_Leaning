@@ -24,7 +24,7 @@ public class BeanConfig {
     public DruidDataSource getDruidDataSource(){
         DruidDataSource dds = new DruidDataSource();
         dds.setDriverClassName("com.mysql.jdbc.Driver");
-        dds.setUrl("jdbc:mysql://localhost:3306/bank?userUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true");
+        dds.setUrl("jdbc:mysql://localhost:3306/springframe?userUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true");
         dds.setUsername("root");
         dds.setPassword("123456");
         return dds;

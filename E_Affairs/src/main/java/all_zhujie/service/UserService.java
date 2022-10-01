@@ -24,7 +24,7 @@ public class UserService {
         userDao.addMoney();
         userDao.reduceMoney();
         //模拟异常,触发事务操作
-        int i = 10/0;
+        //int i = 10/0;
     }
 }
 

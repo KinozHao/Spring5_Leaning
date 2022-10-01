@@ -1,7 +1,7 @@
-package d_top.test;
+package book_manage.test;
 
-import d_top.entity.Book;
-import d_top.service.BookService;
+import book_manage.entity.Book;
+import book_manage.service.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
@@ -28,15 +28,15 @@ public class BookTest {
         book.setName("背包十年");
         book.setMoney(39.5);
         book.setPassword("123456");
-        bs.addBook(book);
+        //bs.addBook(book);
 
         //删除操作
         //bs.delBook("8");
 
         //修改操作
         final Book book2 = new Book();
-        book2.setId(8);
-        book2.setName("骆驼祥子");
+        book2.setId(1);
+        book2.setName("电机拖动与维护");
         book2.setMoney(19.5);
         book2.setPassword("123456");
         //bs.updateBook(book2);

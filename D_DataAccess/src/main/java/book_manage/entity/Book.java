@@ -1,4 +1,4 @@
-package d_top.entity;
+package book_manage.entity;
 
 import org.springframework.stereotype.Component;
 

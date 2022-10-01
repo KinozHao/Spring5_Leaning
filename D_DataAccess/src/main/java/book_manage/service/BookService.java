@@ -1,8 +1,8 @@
-package d_top.service;
+package book_manage.service;
 
-import d_top.dao.BookDao;
-import d_top.dao.BookQuery;
-import d_top.entity.Book;
+import book_manage.entity.Book;
+import book_manage.dao.BookDao;
+import book_manage.dao.BookQuery;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

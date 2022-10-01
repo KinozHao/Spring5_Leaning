@@ -1,6 +1,6 @@
-package d_top.dao;
+package book_manage.dao;
 
-import d_top.entity.Book;
+import book_manage.entity.Book;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

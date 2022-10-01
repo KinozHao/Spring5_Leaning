@@ -16,13 +16,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void addMoney() {
-        String sql = "update account set money=money-? where name=?;";
+        String sql = "update account_e_affairs set money=money-? where name=?;";
         jdbcTemplate.update(sql,100,"Tom");
     }
 
     @Override
     public void reduceMoney() {
-        String sql = "update account set money=money+? where name=?;";
+        String sql = "update account_e_affairs set money=money+? where name=?;";
         jdbcTemplate.update(sql,100,"Jerry");
     }
 }

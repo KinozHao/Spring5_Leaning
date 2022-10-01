@@ -1,6 +1,6 @@
-package d_top.dao;
+package book_manage.dao;
 
-import d_top.entity.Book;
+import book_manage.entity.Book;
 
 import java.util.List;
 
