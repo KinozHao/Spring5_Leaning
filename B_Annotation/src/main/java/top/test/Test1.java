@@ -6,7 +6,7 @@ import top.service.UserService;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import top.class1.HelloSpring;
+import top.HelloSpring;
 
 /**
  * @author kinoz
@@ -30,7 +30,7 @@ public class Test1 {
         userService.info();
         System.out.println("-----");
         //普通属性注入@Value
-        userService.value();
+        userService.valueAnnotation();
 
     }
     @Test
@@ -41,6 +41,6 @@ public class Test1 {
         userService.info();
         System.out.println("----------------------------");
         //普通属性注入@Value
-        userService.value();
+        userService.valueAnnotation();
     }
 }

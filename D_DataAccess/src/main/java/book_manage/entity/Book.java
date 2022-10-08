@@ -1,5 +1,10 @@
 package book_manage.entity;
 
+import jdk.jfr.DataAmount;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,51 +13,13 @@ import org.springframework.stereotype.Component;
  * @apiNote
  */
 @Component
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Book {
     private int id;
     private String name;
     private double money;
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getMoney() {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", money=" + money +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }

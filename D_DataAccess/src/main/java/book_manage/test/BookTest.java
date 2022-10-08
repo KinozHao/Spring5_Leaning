@@ -53,7 +53,7 @@ public class BookTest {
 
         //查询返回集合(所有数据)
         final List<Book> allBook = bs.findAll();
-        //allBook.forEach(System.out::println);
+        allBook.forEach(System.out::println);
     }
 
 

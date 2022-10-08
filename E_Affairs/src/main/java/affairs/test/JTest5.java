@@ -37,8 +37,10 @@ public class JTest5 {
         //cont.registerBean(Lambda.class,() -> new Lambda());
         //方法引用
         cont.registerBean("ltd",Lambda.class, Lambda::new);
+
         //3.获取spring的注册对象
         final Lambda ltd = (Lambda) cont.getBean("ltd");
         ltd.info();
+        ltd.message("hello");
     }
 }

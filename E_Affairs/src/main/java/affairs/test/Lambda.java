@@ -12,5 +12,6 @@ public class Lambda {
         System.out.println("关于函数式写法的体现");
     }
     public void message(@Nullable String value){
+        System.out.println(value);
     }
 }
