@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="B_Annotation" />
         <module name="F_AllAnotation" />
-        <module name="C_AOP" />
         <module name="D_DataAccess" />
+        <module name="C_AOP" />
         <module name="A_IOC" />
         <module name="E_Affairs" />
+        <module name="D_DataAccessByMybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

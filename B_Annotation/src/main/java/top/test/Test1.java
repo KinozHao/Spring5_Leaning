@@ -34,7 +34,7 @@ public class Test1 {
 
     }
     @Test
-    public void UserDaoTest2(){
+    public void AllAnnotation_Test(){
         final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         final UserService userService = context.getBean("userService", UserService.class);
         System.out.println("-------完全基于注解开发--------");

@@ -25,7 +25,7 @@ public class BookDaoImpl implements BookDao {
     @Override
     public void addBook(Book book) {
         String sql = "insert into book_info values(?,?,?,?)";
-        int add= jdbcTemplate.update(sql, book.getId(), book.getName(), book.getMoney(), book.getPassword());
+        int add= jdbcTemplate.update(sql, book.getId(), book.getName(), book.getMoney(), book.getCountry());
         System.out.println(sql);
         System.out.println("添加成功:影响行数"+add);
     }
@@ -41,8 +41,8 @@ public class BookDaoImpl implements BookDao {
     //改
     @Override
     public void updateBook(Book book) {
-        String  sql = "update book_info set name=?,money=?,password=? where id=?";  //根据id修改
-        final int update = jdbcTemplate.update(sql, book.getName(), book.getMoney(), book.getPassword(), book.getId());
+        String  sql = "update book_info set name=?,money=?,country=? where id=?";  //根据id修改
+        final int update = jdbcTemplate.update(sql, book.getName(), book.getMoney(), book.getCountry(), book.getId());
         System.out.println("修改成功:影响行数"+update);
     }
 
@@ -59,7 +59,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public void batchUpdate(List<Object[]> args) {
-        String  sql = "update book_info set name=?,money=?,password=? where id=?";
+        String  sql = "update book_info set name=?,money=?,country=? where id=?";
         final int[] ints = jdbcTemplate.batchUpdate(sql, args);
         System.out.println(Arrays.toString(ints));
     }

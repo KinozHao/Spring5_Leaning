@@ -17,9 +17,9 @@ import javax.annotation.Resource;
 public class UserService {
     //普通属性注入
     @Value("窗前明月光,疑是地上霜")
-    private String line_chinese;
+    private String var;
     public void valueAnnotation(){
-        System.out.println(line_chinese);
+        System.out.println(var);
     }
 
 

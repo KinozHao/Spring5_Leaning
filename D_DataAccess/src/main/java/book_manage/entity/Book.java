@@ -21,5 +21,5 @@ public class Book {
     private int id;
     private String name;
     private double money;
-    private String password;
+    private String country;
 }

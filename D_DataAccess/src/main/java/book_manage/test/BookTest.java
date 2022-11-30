@@ -24,8 +24,8 @@ public class BookTest {
     public void cmdTest(){
         //增加操作
         final Book book = new Book();
-        book.setId(100);
-        book.setName("背包十年");
+        book.setId(10044);
+        book.setName("背吧二十年");
         book.setMoney(39.5);
         book.setPassword("123456");
         //bs.addBook(book);
@@ -34,11 +34,11 @@ public class BookTest {
         //bs.delBook("8");
 
         //修改操作
-        final Book book2 = new Book();
+        /*final Book book2 = new Book();
         book2.setId(1);
         book2.setName("电机拖动与维护");
         book2.setMoney(19.5);
-        book2.setPassword("123456");
+        book2.setPassword("123456");*/
         //bs.updateBook(book2);
 
     }
